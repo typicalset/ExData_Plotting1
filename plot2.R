@@ -20,9 +20,11 @@ dts <- paste(data2$Date, data2$Time)
 datetimes <- strptime(dts, "%Y-%m-%d %H:%M:%S")
 
 # Now plot
+png("plot2.png",width=480,height=480,units="px")
 with(data=data2,  {
     plot(datetimes, Global_active_power,
          type="l",
          xlab=NA,
          ylab="Global Active Power (kilowatts)")
     })
+dev.off()

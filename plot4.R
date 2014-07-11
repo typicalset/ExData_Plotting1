@@ -23,6 +23,7 @@ data2$Global_reactive_power <- as.numeric(data2$Global_reactive_power)
 # Coerce the "Voltage" data to numeric
 data2$Voltage <- as.numeric(data2$Voltage)
 
+png("plot4.png",width=480,height=480,units="px")
 par(mfrow = c(2,2))
 
 # Now plot
@@ -51,4 +52,5 @@ with(data=data2,  {
     plot(datetimes, Global_reactive_power,
          type="l")   
     })
+dev.off()
 

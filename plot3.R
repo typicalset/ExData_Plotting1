@@ -20,6 +20,7 @@ dts <- paste(data2$Date, data2$Time)
 datetimes <- strptime(dts, "%Y-%m-%d %H:%M:%S")
 
 # Now plot
+png("plot3.png",width=480,height=480,units="px")
 with(data=data2,  {
     plot(datetimes, Sub_metering_1,
          type="l",
@@ -32,4 +33,5 @@ with(data=data2,  {
            legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
            col=c("black","red","blue"))
     })
+dev.off()
 

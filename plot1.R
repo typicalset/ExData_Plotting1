@@ -17,8 +17,10 @@ data2 <- subset(data, (Date == as.Date("2007-02-01", format="%Y-%m-%d"))
 
 
 # Now plot
+png("plot1.png",width=480,height=480,units="px")
 hist(data2$Global_active_power, 
      col="red",
      xlab="Global Active Power (kilowatts)",
      ylab="Frequency",
      main="Global Active Power")
+dev.off()
